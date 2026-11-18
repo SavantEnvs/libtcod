@@ -1,0 +1,8 @@
+project: savantenvs/libtcod
+target: apf_file
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/apf_file/testsuite
+cmds:
+  - cmd: /mayhem/apf_file @@
+    timeout: 30

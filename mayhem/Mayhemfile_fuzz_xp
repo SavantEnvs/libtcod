@@ -1,0 +1,9 @@
+project: savantenvs/libtcod
+target: fuzz_xp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_xp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_xp
+    libfuzzer: true
+    timeout: 30

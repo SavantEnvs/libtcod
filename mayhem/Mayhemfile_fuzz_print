@@ -1,0 +1,10 @@
+project: savantenvs/libtcod
+target: fuzz_print
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_print/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_print
+    libfuzzer: true
+    timeout: 30
+    dictionary: /mayhem/mayhem/fuzz_print/fuzz_print.dict

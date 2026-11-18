@@ -1,0 +1,9 @@
+project: savantenvs/libtcod
+target: fuzz_fov
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_fov/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_fov
+    libfuzzer: true
+    timeout: 30

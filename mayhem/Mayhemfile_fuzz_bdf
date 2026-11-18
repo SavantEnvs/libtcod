@@ -1,0 +1,10 @@
+project: savantenvs/libtcod
+target: fuzz_bdf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_bdf/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_bdf
+    libfuzzer: true
+    timeout: 30
+    dictionary: /mayhem/mayhem/fuzz_bdf/fuzz_bdf.dict
